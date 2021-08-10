@@ -1,3 +1,4 @@
+import Footer from "../../components/footer/Footer";
 import Posts from "../../components/posts/Posts";
 import Status from "../../components/status/Status";
 import "./Homepage.scss";
@@ -115,6 +116,7 @@ const Homepage = () => {
               </a>
             </div>
           </div>
+          <Footer />
         </div>
       </div>
     </div>

@@ -1,0 +1,82 @@
+.explore {
+  margin-top: 3rem;
+  &__wrapper {
+    margin: 0 auto;
+    width: 70%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 20vw;
+    grid-auto-rows: 20vw;
+    grid-auto-flow: dense;
+    grid-gap: 3rem;
+
+    @media only screen and (max-width: 650px) {
+      & {
+        width: 90%;
+        grid-gap: 2rem;
+      }
+    }
+    @media only screen and (max-width: 414px) {
+      & {
+        width: 95%;
+        grid-gap: 1rem;
+      }
+    }
+  }
+  &__postContainer {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: 100%;
+    &.video {
+      grid-column: span 2;
+      grid-row: span 2;
+    }
+    span {
+      color: #fff;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.3);
+      display: none;
+      z-index: 20;
+    }
+  }
+  &__postContainer:hover &__postInfo,
+  &__postContainer:hover::before {
+    display: flex;
+  }
+  &__postImg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+  &__postInfo {
+    display: flex;
+    align-items: center;
+    display: none;
+    z-index: 30;
+    span {
+      display: flex;
+      align-items: center;
+      font-size: 1.6rem;
+    }
+    span:not(:last-child) {
+      margin-right: 3rem;
+    }
+  }
+  &__postIcon {
+    font-size: 1.6rem;
+    margin-right: 0.3rem;
+  }
+}

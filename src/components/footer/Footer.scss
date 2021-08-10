@@ -1,0 +1,25 @@
+.footer {
+  margin-top: 3rem;
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    width: 25rem;
+
+    &-item {
+      margin-right: 0.3rem;
+      color: #ccc;
+      cursor: pointer;
+    }
+  }
+
+  &-legal {
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    color: #ccc;
+    display: block;
+  }
+}
